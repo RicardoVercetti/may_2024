@@ -1,9 +1,8 @@
 # may_2024
 
-Front end stuff for electron and react-native
+## Front end stuff for electron and react-native
 
-
-# source : https://youtu.be/SgmNxE9lWcY?si=6BrDYBOuO-rDLnLn
+source : https://youtu.be/SgmNxE9lWcY?si=6BrDYBOuO-rDLnLn
 
 Transistions and animations
     -   Transitions : 
