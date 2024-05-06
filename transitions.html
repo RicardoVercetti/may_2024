@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            margin: 5rem;
+        }
+
+        .btn {
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 0.5em 1em;
+            color: #DE3163;
+            background-color: wheat;
+            border: 10px solid #DE3163;
+            border-radius: 5px;
+
+            /* transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            transition-delay: 0s; */
+
+            /* transition: transform 0.3s, background-color 0.3s, color 0.3s; */
+            transition: all 0.3s;
+            /* cuz ease and delay 0 is default */
+        }
+
+        .btn:hover {
+            transform: translateY(-10px);
+            background-color: #DE3163;
+            color: wheat;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <button class="btn">
+            Learn More
+        </button>
+    </div>
+</body>
+</html>

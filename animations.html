@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-300px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .heading-1 {
+            animation-name: slideInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: ;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1 class="heading-1"> Hello Omniverse!</h1>
+    </section>
+</body>
+</html>
