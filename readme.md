@@ -2,7 +2,7 @@
 
 ## Front end stuff for electron and react-native
 
-source : https://youtu.be/SgmNxE9lWcY?si=6BrDYBOuO-rDLnLn
+source : [slaying the dragon](https://youtu.be/SgmNxE9lWcY?si=6BrDYBOuO-rDLnLn)
 
 Transistions and animations
     -   Transitions : 
