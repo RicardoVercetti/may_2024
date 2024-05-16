@@ -16,20 +16,53 @@
             }
         }
 
-        .heading-1 {
+        /* utility classes */
+
+        .animate {
             animation-name: slideInLeft;
+            animation-timing-function: ease-in;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .animate--infinite {
+            animation-iteration-count: infinite;
+        }
+
+        .animate--delay-1s {
+            animation-delay: 1s;
+        }
+
+        .animate--fast {
+            animation-duration: 0.6s;
+        }
+
+        .animate--slow {
+            animation-duration: 3s;
+        }
+
+        .heading-1 {
+            /* animation-name: slideInLeft;
             animation-duration: 1s;
             animation-timing-function: ease-in;
             animation-delay: 0s;
             animation-iteration-count: 1;
             animation-direction: normal;
-            animation-fill-mode: ;
+            animation-fill-mode: none; */
+
+            /* animation: slideInLeft 1s ease-in; */
+
+            /* forwards, backwards */
+
+            /* transform: translateX(-10px); */
         }
 
     </style>
 </head>
 <body>
     <section>
+        <h1 class="animate animate--infinite animate--delay-1s"> Hello Omniverse!</h1>
+        <h1 class="animate animate--slow animate--infinite"> Hello Omniverse!</h1>
         <h1 class="heading-1"> Hello Omniverse!</h1>
     </section>
 </body>

@@ -13,7 +13,8 @@ Transistions and animations
     -   animations : Without any user actions, can make things move
 
 
-
+Font: Consolas, 'Courier New', monospace
+Theme: Monokai
 
 
 
