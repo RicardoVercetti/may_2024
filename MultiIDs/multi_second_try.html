@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi selectable</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Application Identifiers</legend>
+
+      <div class="selectable" id="selectable"></div>
+    </fieldset>
+
+    <div class="selections" id="selections">
+
+    </div>
+
+
+    <select name="options" multiple>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+      </select>
+
+
+    <script>
+      const allIds = [
+        "A00001",
+        "A00002",
+        "A00003",
+        "A00004",
+        "A00005",
+        "A00006",
+        "A00007",
+        "A00008",
+        "A00009",
+        "A000010",
+        "A000011",
+        "A000012",
+        "A000013",
+        "A000014",
+        "A000015",
+      ];
+
+      let selectedIds = new Set();
+
+      const createFirstOut = () => {
+        const selectable = document.getElementById("selectable");
+        for (const name of allIds) {
+          const elCheckBox = document.createElement("input");
+          // const name = "A0000" + i;
+          elCheckBox.type = "checkbox";
+          elCheckBox.id = name;
+          elCheckBox.name = name;
+          elCheckBox.value = name;
+          const elLabel = document.createElement("label");
+          elLabel.for = name; // usually element ID is used to refer this
+          elLabel.innerText = name;
+          elCheckBox.onclick = () => handleClick(name);
+          selectable.appendChild(elCheckBox);
+          selectable.appendChild(elLabel);
+          selectable.appendChild(document.createElement("br"));
+        }
+      };
+
+
+      const handleClick = (clickedName) => {
+        // console.log("Value clicked : "+clickedName);
+        if(selectedIds.has(clickedName)){
+            console.log(`The value ${clickedName} is already added, removing..`);
+            selectedIds.delete(clickedName)
+        } else {
+            selectedIds.add(clickedName);
+            console.log(`The value ${clickedName} is added successfully`);
+        }
+        showSelected();
+      }
+
+      const showSelected = () => {
+        const el = document.getElementById('selections');
+        let stringOfIds = '';
+        el.innerText = '';
+        selectedIds.forEach((val) => {
+            el.innerText = el.innerText+ ' | '+val;
+            stringOfIds += val + ', ';
+            console.log('IDs : ' + stringOfIds);
+        })
+      }
+
+      createFirstOut();
+
+      
+    </script>
+
+    <!-- Include Select2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Select2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+<!-- HTML Dropdown -->
+<select class="select2" multiple="multiple">
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+  <option value="option4">Option 4</option>
+</select>
+
+<!-- Initialize Select2 -->
+<script>
+  $(document).ready(function() {
+    $('.select2').select2();
+  });
+</script>
+
+  </body>
+</html>

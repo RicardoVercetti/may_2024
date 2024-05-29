@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#idListContainer {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
+
+#idList {
+    list-style: none;
+    padding: 0;
+}
+
+#idList li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#idList li:hover {
+    background-color: #f0f0f0;
+}
+
+#idList li.selected {
+    background-color: #d0f0d0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#selectedIds {
+    margin-top: 20px;
+}
