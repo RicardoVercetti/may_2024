@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .green {
+            background-color: greenyellow;
+        }
+
+        .purple, .green {
+            color: darkorange;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+
+        <div class="grid-child purple">
+            Grid Column 1
+            <div>
+                data 1
+            </div>
+            <div>
+                data 1
+            </div>
+            <div>
+                data 1
+            </div>
+            <div>
+                data 1
+            </div>
+            <div>
+                data 1
+            </div>
+        </div>
+    
+        <div class="grid-child green">
+            Grid Column 2
+        </div>
+      
+    </div>
+
+
+</body>
+</html>
